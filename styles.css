@@ -88,36 +88,6 @@ footer {
     text-decoration: none;
     color: white;
     position: relative;
-}
-.menu-item h3,
-.menu-item p {
-    position: relative;
-    z-index: 2;
-}
-.menu-item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 1;
-}
-.menu-item:hover {
-    background: rgba(0, 0, 0, 0.7);
-}
-.menu-item {
-    display: inline-block;
-    width: 30%;
-    margin: 1%;
-    background-size: cover;
-    padding: 10px;
-    text-align: center;
-    box-sizing: border-box;
-    text-decoration: none;
-    color: white;
-    position: relative;
     border: 4px solid transparent; /* Add this line */
     transition: border 0.3s; /* Add this line for smooth transition */
 }
