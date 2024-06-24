@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brew Haven</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #6b4f4f;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: relative;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+        .menu-icon {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            cursor: pointer;
+        }
+        .menu-icon div {
+            width: 30px;
+            height: 4px;
+            background-color: white;
+            margin: 6px 0;
+        }
+        .dropdown-menu {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 20px;
+            background-color: #6b4f4f;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dropdown-menu a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            margin: 5px 0;
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        .showcase {
+            background: url('coffee.jpg') no-repeat center center/cover;
+            height: 400px;
+            color: white;
+            text-align: center;
+            padding-top: 150px;
+        }
+        .showcase h1 {
+            font-size: 55px;
+        }
+        .content {
+            padding: 20px;
+            background: white;
+            margin: 20px 0;
+        }
+        footer {
+            background-color: #6b4f4f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .menu-item {
+            display: inline-block;
+            width: 30%;
+            margin: 1%;
+            background: #eee;
+            padding: 10px;
+            text-align: center;
+        }
+        .menu-item a {
+            text-decoration: none;
+            color: #6b4f4f;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Brew Haven</h1>
+            <div class="menu-icon" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#menu">Menu</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="dropdown-menu" id="dropdownMenu">
+                <a href="#home">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+    <section class="showcase" id="home">
+        <div class="container">
+            <h1>Welcome to Brew Haven</h1>
+            <p>Your perfect place for a coffee break</p>
+        </div>
+    </section>
+    <section class="content" id="menu">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-item">
+                <h3>Espresso</h3>
+                <p>Rich and bold espresso shot</p>
+                <p>$2.50</p>
+                <a href="espresso.html">Learn More</a>
+            </div>
+            <div class="menu-item">
+                <h3>Latte</h3>
+                <p>Smooth and creamy latte</p>
+                <p>$3.50</p>
+                <a href="latte.html">Learn More</a>
+            </div>
+            <div class="menu-item">
+                <h3>Cappuccino</h3>
+                <p>Perfect blend of espresso, milk, and foam</p>
+                <p>$3.75</p>
+                <a href="cappuccino.html">Learn More</a>
+            </div>
+            <div class="menu-item">
+                <h3>Mocha</h3>
+                <p>Chocolate-flavored variant of a caffè latte</p>
+                <p>$4.00</p>
+                <a href="mocha.html">Learn More</a>
+            </div>
+            <div class="menu-item">
+                <h3>Americano</h3>
+                <p>Espresso with hot water</p>
+                <p>$3.00</p>
+                <a href="americano.html">Learn More</a>
+            </div>
+            <div class="menu-item">
+                <h3>Flat White</h3>
+                <p>Smooth microfoam milk over a single shot of espresso</p>
+                <p>$3.75</p>
+                <a href="flatwhite.html">Learn More</a>
+            </div>
+        </div>
+    </section>
+    <section class="content" id="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <p>Email: info@brewhaven.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 123 Coffee St, Caffeine City, CO</p>
+        </div>
+    </section>
+    <footer>
+        <p>Brew Haven &copy; 2024</p>
+    </footer>
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById('dropdownMenu');
+            if (menu.style.display === 'block') {
+                menu.style.display = 'none';
+            } else {
+                menu.style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
